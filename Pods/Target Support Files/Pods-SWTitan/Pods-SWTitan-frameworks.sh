@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SWTitan/Alamofire.framework"
+  install_framework "Pods-SWTitan/ChameleonFramework.framework"
   install_framework "Pods-SWTitan/ObjectMapper.framework"
   install_framework "Pods-SWTitan/Spring.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SWTitan/Alamofire.framework"
+  install_framework "Pods-SWTitan/ChameleonFramework.framework"
   install_framework "Pods-SWTitan/ObjectMapper.framework"
   install_framework "Pods-SWTitan/Spring.framework"
 fi

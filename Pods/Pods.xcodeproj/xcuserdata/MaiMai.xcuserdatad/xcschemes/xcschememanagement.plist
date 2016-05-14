@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5D5ECE41DB3037CE916FBF47689615AB</key>
+		<key>388312A57107DCE07AFAC9781318EA4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>775AA287CE4A24588C7BB9E9511C3C48</key>
+		<key>48440D00F05C49F36C19DB4410284DE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5172ACAB7FEA22813859DC97CA0AA16F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class NavigationViewController: UINavigationController {
     
@@ -16,6 +17,12 @@ class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        
+        //Customize navigation bar
+        navigationBar.barTintColor = UIColor.flatBlueColor()
+        navigationBar.tintColor    = UIColor.flatWhiteColor()
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.flatWhiteColor(), NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 15.0)!]
+
     }
     
     override func didReceiveMemoryWarning() {

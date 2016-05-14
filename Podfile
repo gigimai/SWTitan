@@ -6,6 +6,7 @@ target 'SWTitan' do
 pod 'Alamofire', '~> 3.4'
 pod 'ObjectMapper', '~> 1.3'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+pod 'ChameleonFramework/Swift'
 end
 
 target 'SWTitanTests' do
