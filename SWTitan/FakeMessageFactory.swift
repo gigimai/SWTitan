@@ -54,7 +54,18 @@ func createPhotoMessageModel(uid: String, image: UIImage, size: CGSize, isIncomi
 
 class FakeMessageFactory {
     static let demoTexts = [
-        "Hello \(UIDevice.currentDevice().name). I am Jarvis, your personal movie finding assistant. How can I help you?",
+        "Good choice.",
+        "Where do you want to go?",
+        "Are you going alone?",
+        "I don't five a fuck",
+        "Well, fuck you,too"
+    ]
+    
+    static let demoAnswers = [
+        "Hello" : ["How are you today?"],
+        "Captain America" : ["Awesome. I guarantee you're gonna have a good time. #teamIronMan","Which theater do you want to go?"],
+        "BHD" : ["Good choice. But which BHD?"],
+        "Bitexco" : ["I've heard that's a good theater. Here is what we found"]
     ]
 
     class func createChatItem(uid: String) -> MessageModelProtocol {
@@ -74,6 +85,18 @@ class FakeMessageFactory {
     class func createTextMessageModel(uid: String, isIncoming: Bool) -> TextMessageModel {
         let maxText = self.demoTexts.randomItem()
         return SWTitan.createTextMessageModel(uid, text: maxText, isIncoming: isIncoming)
+    }
+    
+    class func createAnswerForKey(keyword : String, uid: Int) -> [TextMessageModel] {
+        guard let answers = self.demoAnswers[insensitive: keyword] else {
+            return [SWTitan.createTextMessageModel("\(uid)", text: "Sorry. I don't understand", isIncoming: true)]
+        }
+        var mutableUid = uid - 1
+        return answers.map { (answer) in
+            mutableUid += 1
+            return SWTitan.createTextMessageModel("\(mutableUid)", text: answer, isIncoming: true)
+            
+        }
     }
 
     class func createPhotoMessageModel(uid: String, isIncoming: Bool) -> PhotoMessageModel {
@@ -148,5 +171,20 @@ class TutorialMessageFactory {
             }
         }
         return result
+    }
+}
+
+extension Dictionary where Key : StringLiteralConvertible {
+    subscript(insensitive key : Key) -> Value? {
+        get {
+            let searchKey = String(key).lowercaseString
+            for k in self.keys {
+                let lowerK = String(k).lowercaseString
+                if searchKey == lowerK {
+                    return self[k]
+                }
+            }
+            return nil
+        }
     }
 }

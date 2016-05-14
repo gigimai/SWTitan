@@ -28,6 +28,7 @@ import Chatto
 class FakeDataSource: ChatDataSourceProtocol {
     var nextMessageId: Int = 0
     let preferredMaxWindowSize = 500
+    var sendingMessage = ""
 
     var slidingWindow: SlidingDataSource<ChatItemProtocol>!
     init(count: Int, pageSize: Int) {
@@ -44,8 +45,18 @@ class FakeDataSource: ChatDataSourceProtocol {
     lazy var messageSender: FakeMessageSender = {
         let sender = FakeMessageSender()
         sender.onMessageChanged = { [weak self] (message) in
-            guard let `self` = self else { return }
+            guard let `self` = self else {
+                return
+            }
+            
             self.delegate?.chatDataSourceDidUpdate(self)
+        }
+        sender.messageSuccess = {[weak self] (message) in
+            guard let `self` = self else {
+                return
+            }
+            
+            self.answerToKey(self.sendingMessage)
         }
         return sender
     }()
@@ -80,6 +91,7 @@ class FakeDataSource: ChatDataSourceProtocol {
         let uid = "\(self.nextMessageId)"
         self.nextMessageId += 1
         let message = createTextMessageModel(uid, text: text, isIncoming: false)
+        self.sendingMessage = text
         self.messageSender.sendMessage(message)
         self.slidingWindow.insertItem(message, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
@@ -108,6 +120,14 @@ class FakeDataSource: ChatDataSourceProtocol {
         self.delegate?.chatDataSourceDidUpdate(self)
     }
 
+    func answerToKey(keyword: String) {
+        self.sendingMessage = ""
+        let answerList = FakeMessageFactory.createAnswerForKey(keyword, uid: self.nextMessageId)
+        self.nextMessageId += answerList.count
+        answerList.forEach(self.slidingWindow.insertItem)
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
+    
     func adjustNumberOfMessages(preferredMaxCount preferredMaxCount: Int?, focusPosition: Double, completion:(didAdjust: Bool) -> Void) {
         let didAdjust = self.slidingWindow.adjustWindow(focusPosition: focusPosition, maxWindowSize: preferredMaxCount ?? self.preferredMaxWindowSize)
         completion(didAdjust: didAdjust)

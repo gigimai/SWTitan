@@ -86,6 +86,10 @@ public class SlidingDataSource<Element> {
         }
     }
     
+    public func insertItem(item: Element) {
+        self.insertItem(item, position: .Bottom)
+    }
+    
     public func resetItems() {
         self.items = []
         self.itemsOffset = 0
