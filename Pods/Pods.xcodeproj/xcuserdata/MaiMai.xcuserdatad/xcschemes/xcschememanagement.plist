@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Chatto.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ChattoAdditions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>388312A57107DCE07AFAC9781318EA4E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>48440D00F05C49F36C19DB4410284DE5</key>
+		<key>18B91733617441F3DD614732D4001EDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -48,6 +53,21 @@
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7AF7E2DF8892E014AE5FCDF57A214D19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DD08A69500CBF4A4EFFEEE3FF9E3C54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD7B99A33DBB764B6ECDA4D6754D3D30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
