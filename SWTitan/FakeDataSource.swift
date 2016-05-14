@@ -112,4 +112,9 @@ class FakeDataSource: ChatDataSourceProtocol {
         let didAdjust = self.slidingWindow.adjustWindow(focusPosition: focusPosition, maxWindowSize: preferredMaxCount ?? self.preferredMaxWindowSize)
         completion(didAdjust: didAdjust)
     }
+    
+    func resetDatasource() {
+        self.slidingWindow.resetItems()
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
 }

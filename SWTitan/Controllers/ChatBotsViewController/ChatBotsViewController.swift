@@ -29,6 +29,13 @@ class ChatBotsViewController: ChatViewController {
         navigationController?.navigationBarHidden = false
         title = "Jarvis"
         chatDataSource = dataSource
+        let resetBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(resetButtonPressed))
+        navigationItem.rightBarButtonItem = resetBarButtonItem
+    }
+    
+    func resetButtonPressed() {
+        dataSource.resetDatasource()
+        dataSource.greeting()
     }
     
     override func viewWillAppear(animated: Bool) {

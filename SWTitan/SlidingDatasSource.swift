@@ -85,6 +85,13 @@ public class SlidingDataSource<Element> {
             self.items.append(item)
         }
     }
+    
+    public func resetItems() {
+        self.items = []
+        self.itemsOffset = 0
+        self.windowCount = 0
+        self.windowOffset = 0
+    }
 
     public func hasPrevious() -> Bool {
         return self.windowOffset > 0
