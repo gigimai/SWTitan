@@ -20,7 +20,7 @@ class CrossDissolveTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 return
         }
         
-        fromViewController.view.frame = transitionContext.initialFrameForViewController(toViewController)
+        toViewController.view.frame = transitionContext.initialFrameForViewController(fromViewController)
         containerView.addSubview(toViewController.view)
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
             fromViewController.view.alpha = 0

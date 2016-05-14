@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4CE7343A6EB2E43FC0E3CD5193224D6D2BAD959E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C0C8F0E3F5D61D9ACD8E25BAD256756FDB83FB31" : 0,
+    "4CE7343A6EB2E43FC0E3CD5193224D6D2BAD959E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "993F0461-552B-46DF-9A17-912E41CD4255",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C0C8F0E3F5D61D9ACD8E25BAD256756FDB83FB31" : "Chatto\/",
+    "4CE7343A6EB2E43FC0E3CD5193224D6D2BAD959E" : "SWTitan\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SWTitan",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SWTitan.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:gigimai\/SWTitan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CE7343A6EB2E43FC0E3CD5193224D6D2BAD959E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/badoo\/Chatto.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C0C8F0E3F5D61D9ACD8E25BAD256756FDB83FB31"
+    }
+  ]
+}

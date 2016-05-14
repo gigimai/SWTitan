@@ -21,8 +21,8 @@ class SplashViewController: ConnectionHandlingViewController {
     }
 
     @IBAction private func startButtonPressed(sender : UIButton) {
-        let viewController = UIViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        let viewController = ChatBotsViewController(dataSource: FakeDataSource(count: 0, pageSize: 50))
+        navigationController?.setViewControllers([viewController], animated: true)
     }
     
 }

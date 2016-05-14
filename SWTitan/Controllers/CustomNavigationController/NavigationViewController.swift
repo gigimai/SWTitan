@@ -19,9 +19,7 @@ class NavigationViewController: UINavigationController {
         delegate = self
         
         //Customize navigation bar
-        navigationBar.barTintColor = UIColor.flatBlueColor()
-        navigationBar.tintColor    = UIColor.flatWhiteColor()
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.flatWhiteColor(), NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 15.0)!]
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.flatBlackColor(), NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 15.0)!]
 
     }
     
