@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3AFDF3451CE6CDF000525461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDF3441CE6CDF000525461 /* AppDelegate.swift */; };
 		3AFDF3471CE6CDF000525461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDF3461CE6CDF000525461 /* ViewController.swift */; };
-		3AFDF34A1CE6CDF000525461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDF3481CE6CDF000525461 /* Main.storyboard */; };
 		3AFDF34C1CE6CDF000525461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDF34B1CE6CDF000525461 /* Assets.xcassets */; };
 		3AFDF34F1CE6CDF000525461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDF34D1CE6CDF000525461 /* LaunchScreen.storyboard */; };
 		3AFDF35A1CE6CDF000525461 /* SWTitanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDF3591CE6CDF000525461 /* SWTitanTests.swift */; };
@@ -37,7 +36,6 @@
 		3AFDF3411CE6CDF000525461 /* SWTitan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWTitan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDF3441CE6CDF000525461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFDF3461CE6CDF000525461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3AFDF3491CE6CDF000525461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AFDF34B1CE6CDF000525461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFDF34E1CE6CDF000525461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AFDF3501CE6CDF000525461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			children = (
 				3AFDF3441CE6CDF000525461 /* AppDelegate.swift */,
 				3AFDF3461CE6CDF000525461 /* ViewController.swift */,
-				3AFDF3481CE6CDF000525461 /* Main.storyboard */,
 				3AFDF34B1CE6CDF000525461 /* Assets.xcassets */,
 				3AFDF34D1CE6CDF000525461 /* LaunchScreen.storyboard */,
 				3AFDF3501CE6CDF000525461 /* Info.plist */,
@@ -231,7 +228,6 @@
 			files = (
 				3AFDF34F1CE6CDF000525461 /* LaunchScreen.storyboard in Resources */,
 				3AFDF34C1CE6CDF000525461 /* Assets.xcassets in Resources */,
-				3AFDF34A1CE6CDF000525461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3AFDF3481CE6CDF000525461 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3AFDF3491CE6CDF000525461 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3AFDF34D1CE6CDF000525461 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -402,9 +390,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWTitan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bappvn.SWTitan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,9 +403,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWTitan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bappvn.SWTitan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
