@@ -15,6 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="76h-O6-rtJ" appends="YES" id="Tgp-rw-QFq"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="76h-O6-rtJ">
+            <connections>
+                <action selector="dismissKeyboard" destination="-1" id="zJL-YW-lbc"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

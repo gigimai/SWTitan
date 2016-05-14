@@ -100,7 +100,6 @@ public class ChatViewController: UIViewController, UICollectionViewDataSource, U
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.accessoryViewRevealer = AccessoryViewRevealer(collectionView: self.collectionView)
-
         self.presenterBuildersByType = self.createPresenterBuilders()
 
         for presenterBuilder in self.presenterBuildersByType.flatMap({ $0.1 }) {

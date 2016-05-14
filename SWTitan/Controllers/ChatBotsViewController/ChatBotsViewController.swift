@@ -102,5 +102,9 @@ class ChatBotsViewController: ChatViewController {
         }
         return item
     }
+    
+    @IBAction private func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 }
