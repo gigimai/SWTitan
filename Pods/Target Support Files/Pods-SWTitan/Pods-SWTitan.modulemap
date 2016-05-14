@@ -1,0 +1,6 @@
+framework module Pods_SWTitan {
+  umbrella header "Pods-SWTitan-umbrella.h"
+
+  export *
+  module * { export * }
+}
