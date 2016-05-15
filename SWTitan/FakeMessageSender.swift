@@ -25,48 +25,43 @@
 import Foundation
 import Chatto
 import ChattoAdditions
+import Alamofire
 
 public class FakeMessageSender {
 
     public var onMessageChanged: ((message: MessageModelProtocol) -> Void)?
-    public var messageSuccess:((message: MessageModelProtocol) -> Void)?
-    
+    public var messageSuccess:((message: MessageModelProtocol, responseText: String) -> Void)?
+    public var messageIsPending:(() -> Void)?
     
     public func sendMessages(messages: [MessageModelProtocol]) {
-        messages.forEach(self.handleMessageStatus)
+        messages.forEach(sendMessage)
     }
 
     public func sendMessage(message: MessageModelProtocol) {
-        message.status = .Sending
-        let delaySeconds: Double = Double(arc4random_uniform(1200)) / 1000.0
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            self.updateMessage(message, status: .Success)
+        message.status = .Success
+        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["text": ""])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    self.messageSuccess?(message: message, responseText: "This is test API call")
+                case .Failure(_):
+                    self.messageSuccess?(message: message, responseText: "Call failed")
+                }
         }
     }
-
-    private func handleMessageStatus(message: MessageModelProtocol) {
-        switch message.status {
-        case .Success:
-            self.updateMessage(message, status: .Success)
-        case .Failed:
-            self.updateMessage(message, status: .Sending)
-        case .Sending:
-            break
-        }
-    }
-
-    private func updateMessage(message: MessageModelProtocol, status: MessageStatus) {
-        if message.status != status {
-            message.status = status
-            self.notifyMessageChanged(message)
-        }
-    }
-
-    private func notifyMessageChanged(message: MessageModelProtocol) {
-        self.onMessageChanged?(message: message)
-        if message.status == .Success {
-            self.messageSuccess?(message: message)
+    
+    public func sendMessage(message: MessageModelProtocol, textMessage: String) {
+        message.status = .Success
+        Alamofire.request(.GET, "http://27afa497.ngrok.io/reply", parameters: ["text": textMessage])
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let JSON = response.result.value
+                    print(JSON)
+                    self.messageSuccess?(message: message, responseText: "This is test API call")
+                case .Failure(let error):
+                    self.messageSuccess?(message: message, responseText: error.localizedDescription)
+                }
         }
     }
 }

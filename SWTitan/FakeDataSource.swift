@@ -51,12 +51,12 @@ class FakeDataSource: ChatDataSourceProtocol {
             
             self.delegate?.chatDataSourceDidUpdate(self)
         }
-        sender.messageSuccess = {[weak self] (message) in
+        sender.messageSuccess = {[weak self] (message, responseText) in
             guard let `self` = self else {
                 return
             }
             
-            self.answerToKey(self.sendingMessage)
+            self.answerToKey(self.sendingMessage, response: responseText)
         }
         return sender
     }()
@@ -92,7 +92,7 @@ class FakeDataSource: ChatDataSourceProtocol {
         self.nextMessageId += 1
         let message = createTextMessageModel(uid, text: text, isIncoming: false)
         self.sendingMessage = text
-        self.messageSender.sendMessage(message)
+        self.messageSender.sendMessage(message, textMessage: self.sendingMessage)
         self.slidingWindow.insertItem(message, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
     }
@@ -120,11 +120,10 @@ class FakeDataSource: ChatDataSourceProtocol {
         self.delegate?.chatDataSourceDidUpdate(self)
     }
 
-    func answerToKey(keyword: String) {
-        self.sendingMessage = ""
-        let answerList = FakeMessageFactory.createAnswerForKey(keyword, uid: self.nextMessageId)
-        self.nextMessageId += answerList.count
-        answerList.forEach(self.slidingWindow.insertItem)
+    func answerToKey(keyword: String, response: String) {
+        let answer = FakeMessageFactory.createTextMessageModel("\(self.nextMessageId)", text: response, isIncoming: true)
+        self.nextMessageId += 1
+        self.slidingWindow.insertItem(answer, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
     }
     

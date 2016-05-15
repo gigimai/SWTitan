@@ -98,6 +98,10 @@ class FakeMessageFactory {
             
         }
     }
+    
+    class func createTextMessageModel(uid: String, text: String, isIncoming: Bool) -> TextMessageModel {
+        return SWTitan.createTextMessageModel(uid, text: text, isIncoming: isIncoming)
+    }
 
     class func createPhotoMessageModel(uid: String, isIncoming: Bool) -> PhotoMessageModel {
         var imageSize = CGSize.zero
