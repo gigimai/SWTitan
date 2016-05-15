@@ -165,9 +165,7 @@ extension ChatInputBar {
     public func setAppearance(appearance: ChatInputBarAppearance) {
         self.textView.font = appearance.textFont
         self.textView.textColor = appearance.textColor
-        self.textView.setTextPlaceholderFont(appearance.textPlaceholderFont)
-        self.textView.setTextPlaceholderColor(appearance.textPlaceholderColor)
-        self.textView.setTextPlaceholder(appearance.textPlaceholder)
+        textView.layer.cornerRadius = 5
         self.sendButton.setTitle(appearance.sendButtonTitle, forState: .Normal)
     }
 }

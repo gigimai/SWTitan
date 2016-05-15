@@ -26,8 +26,6 @@ import UIKit
 
 public class ExpandableTextView: UITextView {
 
-    private let placeHolder = MarginLabel()
-
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
@@ -47,9 +45,7 @@ public class ExpandableTextView: UITextView {
 
     private func commonInit() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidChange", name: UITextViewTextDidChangeNotification, object: self)
-        self.configurePlaceholder()
         self.addObserver(self, forKeyPath: "contentSize", options: .New, context: nil)
-        self.updatePlaceholderVisibility()
     }
     
     override public func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
@@ -64,7 +60,6 @@ public class ExpandableTextView: UITextView {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-        placeHolder.frame = self.bounds
     }
 
     override public func intrinsicContentSize() -> CGSize {
@@ -77,32 +72,7 @@ public class ExpandableTextView: UITextView {
         }
     }
 
-    override public var textContainerInset: UIEdgeInsets {
-        didSet {
-            self.configurePlaceholder()
-        }
-    }
-
-    override public var textAlignment: NSTextAlignment {
-        didSet {
-            self.configurePlaceholder()
-        }
-    }
-
-    public func setTextPlaceholder(textPlaceholder: String) {
-        placeHolder.text = textPlaceholder
-    }
-
-    public func setTextPlaceholderColor(color: UIColor) {
-        placeHolder.textColor = color
-    }
-
-    public func setTextPlaceholderFont(font: UIFont) {
-        placeHolder.font = font
-    }
-
     func textDidChange() {
-        self.updatePlaceholderVisibility()
         self.scrollToCaret()
     }
 
@@ -115,36 +85,4 @@ public class ExpandableTextView: UITextView {
         }
     }
 
-    private func updatePlaceholderVisibility() {
-        if text == "" {
-            self.showPlaceholder()
-        } else {
-            self.hidePlaceholder()
-        }
-    }
-
-    private func showPlaceholder() {
-        self.addSubview(placeHolder)
-    }
-
-    private func hidePlaceholder() {
-        placeHolder.removeFromSuperview()
-    }
-
-    private func configurePlaceholder() {
-        placeHolder.translatesAutoresizingMaskIntoConstraints = false
-        placeHolder.userInteractionEnabled = false
-        placeHolder.textAlignment = textAlignment
-        placeHolder.backgroundColor = UIColor.clearColor()
-        placeHolder.drawTextInRect(UIEdgeInsetsInsetRect(placeHolder.frame,UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5))
-)    }
-}
-
-class MarginLabel: UILabel {
-    
-    override func drawTextInRect(rect: CGRect) {
-        let insets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
-    }
-    
 }
