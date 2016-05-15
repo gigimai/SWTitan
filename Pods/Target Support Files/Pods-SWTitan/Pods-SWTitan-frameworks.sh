@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SWTitan/ChattoAdditions.framework"
   install_framework "Pods-SWTitan/ObjectMapper.framework"
   install_framework "Pods-SWTitan/Spring.framework"
+  install_framework "Pods-SWTitan/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SWTitan/Alamofire.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SWTitan/ChattoAdditions.framework"
   install_framework "Pods-SWTitan/ObjectMapper.framework"
   install_framework "Pods-SWTitan/Spring.framework"
+  install_framework "Pods-SWTitan/SwiftyJSON.framework"
 fi

@@ -26,6 +26,7 @@ import Foundation
 import Chatto
 import ChattoAdditions
 import Alamofire
+import SwiftyJSON
 
 public class FakeMessageSender {
 
@@ -56,9 +57,11 @@ public class FakeMessageSender {
             .responseJSON { response in
                 switch response.result {
                 case .Success:
-                    let JSON = response.result.value
-                    print(JSON)
-                    self.messageSuccess?(message: message, responseText: "This is test API call")
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        let reply = json["reply"].stringValue
+                        self.messageSuccess?(message: message, responseText: reply)
+                    }
                 case .Failure(let error):
                     self.messageSuccess?(message: message, responseText: error.localizedDescription)
                 }

@@ -8,6 +8,7 @@ pod 'ObjectMapper', '~> 1.3'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 pod 'ChameleonFramework/Swift'
 pod 'Chatto', '= 1.0.0'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'ChattoAdditions', '= 1.0.0'
 end
 
