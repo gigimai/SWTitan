@@ -12,6 +12,10 @@
 		3A67A69B1CE6F4A6006B0ECC /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A67A69A1CE6F4A6006B0ECC /* SplashViewController.xib */; };
 		3A67A69D1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A69C1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift */; };
 		3A67A6A01CE6F8FD006B0ECC /* CrossDissolveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A69F1CE6F8FD006B0ECC /* CrossDissolveTransition.swift */; };
+		3A67A6A51CE7198D006B0ECC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A6A41CE7198D006B0ECC /* Movie.swift */; };
+		3A67A6A71CE71AA8006B0ECC /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A6A61CE71AA8006B0ECC /* Theater.swift */; };
+		3A67A6A91CE71ACD006B0ECC /* Screening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A6A81CE71ACD006B0ECC /* Screening.swift */; };
+		3A67A6AB1CE71BB1006B0ECC /* ScreeningList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A6AA1CE71BB1006B0ECC /* ScreeningList.swift */; };
 		3AFDF3451CE6CDF000525461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDF3441CE6CDF000525461 /* AppDelegate.swift */; };
 		3AFDF34C1CE6CDF000525461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDF34B1CE6CDF000525461 /* Assets.xcassets */; };
 		3AFDF34F1CE6CDF000525461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFDF34D1CE6CDF000525461 /* LaunchScreen.storyboard */; };
@@ -43,6 +47,10 @@
 		3A67A69A1CE6F4A6006B0ECC /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashViewController.xib; path = Views/SplashViewController/SplashViewController.xib; sourceTree = "<group>"; };
 		3A67A69C1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionHandlingViewController.swift; path = Controllers/ConnectionHandlingViewController.swift; sourceTree = "<group>"; };
 		3A67A69F1CE6F8FD006B0ECC /* CrossDissolveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrossDissolveTransition.swift; path = Utils/CustomTransitionAnimation/CrossDissolveTransition.swift; sourceTree = "<group>"; };
+		3A67A6A41CE7198D006B0ECC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Models/Movie/Movie.swift; sourceTree = "<group>"; };
+		3A67A6A61CE71AA8006B0ECC /* Theater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theater.swift; path = Models/Theater/Theater.swift; sourceTree = "<group>"; };
+		3A67A6A81CE71ACD006B0ECC /* Screening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Screening.swift; path = Models/Screening/Screening.swift; sourceTree = "<group>"; };
+		3A67A6AA1CE71BB1006B0ECC /* ScreeningList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreeningList.swift; path = Models/Screening/ScreeningList.swift; sourceTree = "<group>"; };
 		3AFDF3411CE6CDF000525461 /* SWTitan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWTitan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFDF3441CE6CDF000525461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AFDF34B1CE6CDF000525461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +104,9 @@
 		3A1233921CE6F1CC00B8E948 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A67A6A31CE7192B006B0ECC /* Screening */,
+				3A67A6A21CE718F2006B0ECC /* Theater */,
+				3A67A6A11CE718EB006B0ECC /* Movie */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -156,6 +167,31 @@
 				3A67A69F1CE6F8FD006B0ECC /* CrossDissolveTransition.swift */,
 			);
 			name = CustomTransitionAnimation;
+			sourceTree = "<group>";
+		};
+		3A67A6A11CE718EB006B0ECC /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				3A67A6A41CE7198D006B0ECC /* Movie.swift */,
+			);
+			name = Movie;
+			sourceTree = "<group>";
+		};
+		3A67A6A21CE718F2006B0ECC /* Theater */ = {
+			isa = PBXGroup;
+			children = (
+				3A67A6A61CE71AA8006B0ECC /* Theater.swift */,
+			);
+			name = Theater;
+			sourceTree = "<group>";
+		};
+		3A67A6A31CE7192B006B0ECC /* Screening */ = {
+			isa = PBXGroup;
+			children = (
+				3A67A6A81CE71ACD006B0ECC /* Screening.swift */,
+				3A67A6AA1CE71BB1006B0ECC /* ScreeningList.swift */,
+			);
+			name = Screening;
 			sourceTree = "<group>";
 		};
 		3AFDF3381CE6CDF000525461 = {
@@ -405,8 +441,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A67A6A91CE71ACD006B0ECC /* Screening.swift in Sources */,
 				3A67A6A01CE6F8FD006B0ECC /* CrossDissolveTransition.swift in Sources */,
 				3A67A6981CE6F482006B0ECC /* SplashViewController.swift in Sources */,
+				3A67A6A51CE7198D006B0ECC /* Movie.swift in Sources */,
+				3A67A6A71CE71AA8006B0ECC /* Theater.swift in Sources */,
+				3A67A6AB1CE71BB1006B0ECC /* ScreeningList.swift in Sources */,
 				3A67A69D1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift in Sources */,
 				3A1233981CE6F26200B8E948 /* NavigationViewController.swift in Sources */,
 				3AFDF3451CE6CDF000525461 /* AppDelegate.swift in Sources */,
