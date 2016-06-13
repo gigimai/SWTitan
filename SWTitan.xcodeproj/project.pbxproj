@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3A1233981CE6F26200B8E948 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1233971CE6F26200B8E948 /* NavigationViewController.swift */; };
+		3A28D9E71CE752E400979BDC /* ChatItemsDemoDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E11CE752E400979BDC /* ChatItemsDemoDecorator.swift */; };
+		3A28D9E81CE752E400979BDC /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E21CE752E400979BDC /* FakeDataSource.swift */; };
+		3A28D9E91CE752E400979BDC /* FakeMessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E31CE752E400979BDC /* FakeMessageSender.swift */; };
+		3A28D9EA1CE752E400979BDC /* FakePhotoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E41CE752E400979BDC /* FakePhotoMessageViewModel.swift */; };
+		3A28D9EB1CE752E400979BDC /* SlidingDatasSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E51CE752E400979BDC /* SlidingDatasSource.swift */; };
+		3A28D9EC1CE752E400979BDC /* UserActionHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9E61CE752E400979BDC /* UserActionHandlers.swift */; };
+		3A28D9EE1CE752FD00979BDC /* FakeMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9ED1CE752FD00979BDC /* FakeMessageFactory.swift */; };
+		3A28D9F21CE7531200979BDC /* SendingStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9EF1CE7531200979BDC /* SendingStatusCollectionViewCell.swift */; };
+		3A28D9F31CE7531200979BDC /* SendingStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A28D9F01CE7531200979BDC /* SendingStatusCollectionViewCell.xib */; };
+		3A28D9F41CE7531200979BDC /* SendingStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9F11CE7531200979BDC /* SendingStatusPresenter.swift */; };
+		3A28D9F71CE7535200979BDC /* ChatBotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28D9F61CE7535200979BDC /* ChatBotsViewController.swift */; };
+		3A28D9FA1CE7549500979BDC /* ChatBotsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A28D9F91CE7549500979BDC /* ChatBotsViewController.xib */; };
 		3A67A6981CE6F482006B0ECC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A6971CE6F482006B0ECC /* SplashViewController.swift */; };
 		3A67A69B1CE6F4A6006B0ECC /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A67A69A1CE6F4A6006B0ECC /* SplashViewController.xib */; };
 		3A67A69D1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67A69C1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift */; };
@@ -39,6 +51,18 @@
 
 /* Begin PBXFileReference section */
 		3A1233971CE6F26200B8E948 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationViewController.swift; path = Controllers/CustomNavigationController/NavigationViewController.swift; sourceTree = "<group>"; };
+		3A28D9E11CE752E400979BDC /* ChatItemsDemoDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemsDemoDecorator.swift; sourceTree = "<group>"; };
+		3A28D9E21CE752E400979BDC /* FakeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataSource.swift; sourceTree = "<group>"; };
+		3A28D9E31CE752E400979BDC /* FakeMessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageSender.swift; sourceTree = "<group>"; };
+		3A28D9E41CE752E400979BDC /* FakePhotoMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePhotoMessageViewModel.swift; sourceTree = "<group>"; };
+		3A28D9E51CE752E400979BDC /* SlidingDatasSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingDatasSource.swift; sourceTree = "<group>"; };
+		3A28D9E61CE752E400979BDC /* UserActionHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActionHandlers.swift; sourceTree = "<group>"; };
+		3A28D9ED1CE752FD00979BDC /* FakeMessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageFactory.swift; sourceTree = "<group>"; };
+		3A28D9EF1CE7531200979BDC /* SendingStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A28D9F01CE7531200979BDC /* SendingStatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingStatusCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A28D9F11CE7531200979BDC /* SendingStatusPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusPresenter.swift; sourceTree = "<group>"; };
+		3A28D9F61CE7535200979BDC /* ChatBotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBotsViewController.swift; path = Controllers/ChatBotsViewController/ChatBotsViewController.swift; sourceTree = "<group>"; };
+		3A28D9F91CE7549500979BDC /* ChatBotsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChatBotsViewController.xib; path = Views/ChatBotsViewController/ChatBotsViewController.xib; sourceTree = "<group>"; };
 		3A67A6971CE6F482006B0ECC /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = Controllers/SplashViewController/SplashViewController.swift; sourceTree = "<group>"; };
 		3A67A69A1CE6F4A6006B0ECC /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashViewController.xib; path = Views/SplashViewController/SplashViewController.xib; sourceTree = "<group>"; };
 		3A67A69C1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionHandlingViewController.swift; path = Controllers/ConnectionHandlingViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +127,7 @@
 		3A1233931CE6F1D200B8E948 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A28D9F81CE7547300979BDC /* ChatBotsViewController */,
 				3A67A6991CE6F488006B0ECC /* SplashViewController */,
 			);
 			name = Views;
@@ -111,6 +136,7 @@
 		3A1233941CE6F1D800B8E948 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A28D9F51CE7531E00979BDC /* ChatBotsViewController */,
 				3A67A6961CE6F45A006B0ECC /* SpashViewController */,
 				3A1233961CE6F23800B8E948 /* CustomNavigationController */,
 				3A67A69C1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift */,
@@ -121,6 +147,7 @@
 		3A1233951CE6F1E500B8E948 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3A28D9E01CE752B400979BDC /* Source */,
 				3A67A69E1CE6F8C7006B0ECC /* CustomTransitionAnimation */,
 			);
 			name = Utils;
@@ -132,6 +159,39 @@
 				3A1233971CE6F26200B8E948 /* NavigationViewController.swift */,
 			);
 			name = CustomNavigationController;
+			sourceTree = "<group>";
+		};
+		3A28D9E01CE752B400979BDC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A28D9ED1CE752FD00979BDC /* FakeMessageFactory.swift */,
+				3A28D9EF1CE7531200979BDC /* SendingStatusCollectionViewCell.swift */,
+				3A28D9F01CE7531200979BDC /* SendingStatusCollectionViewCell.xib */,
+				3A28D9F11CE7531200979BDC /* SendingStatusPresenter.swift */,
+				3A28D9E11CE752E400979BDC /* ChatItemsDemoDecorator.swift */,
+				3A28D9E21CE752E400979BDC /* FakeDataSource.swift */,
+				3A28D9E31CE752E400979BDC /* FakeMessageSender.swift */,
+				3A28D9E41CE752E400979BDC /* FakePhotoMessageViewModel.swift */,
+				3A28D9E51CE752E400979BDC /* SlidingDatasSource.swift */,
+				3A28D9E61CE752E400979BDC /* UserActionHandlers.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		3A28D9F51CE7531E00979BDC /* ChatBotsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A28D9F61CE7535200979BDC /* ChatBotsViewController.swift */,
+			);
+			name = ChatBotsViewController;
+			sourceTree = "<group>";
+		};
+		3A28D9F81CE7547300979BDC /* ChatBotsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A28D9F91CE7549500979BDC /* ChatBotsViewController.xib */,
+			);
+			name = ChatBotsViewController;
 			sourceTree = "<group>";
 		};
 		3A67A6961CE6F45A006B0ECC /* SpashViewController */ = {
@@ -330,9 +390,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A28D9FA1CE7549500979BDC /* ChatBotsViewController.xib in Resources */,
 				3AFDF34F1CE6CDF000525461 /* LaunchScreen.storyboard in Resources */,
 				3A67A69B1CE6F4A6006B0ECC /* SplashViewController.xib in Resources */,
 				3AFDF34C1CE6CDF000525461 /* Assets.xcassets in Resources */,
+				3A28D9F31CE7531200979BDC /* SendingStatusCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,11 +467,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A28D9EA1CE752E400979BDC /* FakePhotoMessageViewModel.swift in Sources */,
 				3A67A6A01CE6F8FD006B0ECC /* CrossDissolveTransition.swift in Sources */,
+				3A28D9E71CE752E400979BDC /* ChatItemsDemoDecorator.swift in Sources */,
+				3A28D9F21CE7531200979BDC /* SendingStatusCollectionViewCell.swift in Sources */,
+				3A28D9E81CE752E400979BDC /* FakeDataSource.swift in Sources */,
 				3A67A6981CE6F482006B0ECC /* SplashViewController.swift in Sources */,
 				3A67A69D1CE6F51A006B0ECC /* ConnectionHandlingViewController.swift in Sources */,
 				3A1233981CE6F26200B8E948 /* NavigationViewController.swift in Sources */,
+				3A28D9EB1CE752E400979BDC /* SlidingDatasSource.swift in Sources */,
+				3A28D9F41CE7531200979BDC /* SendingStatusPresenter.swift in Sources */,
 				3AFDF3451CE6CDF000525461 /* AppDelegate.swift in Sources */,
+				3A28D9E91CE752E400979BDC /* FakeMessageSender.swift in Sources */,
+				3A28D9EC1CE752E400979BDC /* UserActionHandlers.swift in Sources */,
+				3A28D9EE1CE752FD00979BDC /* FakeMessageFactory.swift in Sources */,
+				3A28D9F71CE7535200979BDC /* ChatBotsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '797E04E4972004F54DED943B'
+               BlueprintIdentifier = '1121BFAA9E9657275CC1E0B0'
                BlueprintName = 'Pods-SWTitan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_SWTitan.framework'>
